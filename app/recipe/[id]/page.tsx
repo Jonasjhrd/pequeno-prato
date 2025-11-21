@@ -1,13 +1,13 @@
 'use client';
 
 import { useParams, useRouter } from 'next/navigation';
-import { recipes } from '../../../src/data/recipes';
+import { recipes } from '@/data/recipes';
 import { ArrowLeft, Clock, Users, Heart } from 'lucide-react';
-import Header from '../../../src/components/Header';
-import Navigation from '../../../src/components/Navigation';
-import Footer from '../../../src/components/Footer';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { useState } from 'react';
-import '../../../src/index.css';
+import '@/index.css';
 
 export default function RecipeDetailPage() {
   const params = useParams();

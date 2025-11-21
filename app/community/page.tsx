@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { Heart, Upload } from 'lucide-react';
-import { communityPosts as initialPosts } from '../../src/data/recipes';
-import Header from '../../src/components/Header';
-import Navigation from '../../src/components/Navigation';
-import Footer from '../../src/components/Footer';
-import '../../src/index.css';
+import { communityPosts as initialPosts } from '@/data/recipes';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import '@/index.css';
 
 export default function CommunityPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

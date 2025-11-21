@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { recipes, badges } from '../../src/data/recipes';
-import GamificationBadge from '../../src/components/GamificationBadge';
-import Header from '../../src/components/Header';
-import Navigation from '../../src/components/Navigation';
-import Footer from '../../src/components/Footer';
+import { recipes, badges } from '@/data/recipes';
+import GamificationBadge from '@/components/GamificationBadge';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { Trophy } from 'lucide-react';
-import '../../src/index.css';
+import '@/index.css';
 
 export default function ProfilePage() {
   const [userPoints] = useState(() => {

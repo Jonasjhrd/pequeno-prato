@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { recipes } from '../../src/data/recipes';
-import RecipeCard from '../../src/components/RecipeCard';
-import RecipeFilter from '../../src/components/RecipeFilter';
-import Header from '../../src/components/Header';
-import Navigation from '../../src/components/Navigation';
-import Footer from '../../src/components/Footer';
-import '../../src/index.css';
+import { recipes } from '@/data/recipes';
+import RecipeCard from '@/components/RecipeCard';
+import RecipeFilter from '@/components/RecipeFilter';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import '@/index.css';
 
 export default function RecipesPage() {
   const [selectedAge, setSelectedAge] = useState('');
