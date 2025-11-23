@@ -18,10 +18,10 @@
         "name": "next"
       }
     ],
-    // ⬇️ LINHA ADICIONADA AQUI
     "baseUrl": ".", 
     "paths": {
-      "@/*": ["./src/*"]
+      // ⬇️ CORREÇÃO FEITA AQUI: Adiciona a raiz do projeto (./*) como segunda opção
+      "@/*": ["./src/*", "./*"] 
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
