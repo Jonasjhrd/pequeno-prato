@@ -18,17 +18,11 @@
         "name": "next"
       }
     ],
+    // ⬇️ ESSENCIAL: Diz ao TypeScript que a raiz do projeto é o ponto de partida
     "baseUrl": ".", 
     "paths": {
-      // ⬇️ Mapeamento Correto Baseado na Estrutura de Pastas ⬇️
-      // Componentes e Lib (Na Raiz do Projeto)
-      "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
-      
-      // Arquivos de App (Para globals.css, layout.tsx, etc.)
-      "@/app/*": ["./app/*"],
-
-      // O alias geral @/ aponta para a raiz
+      // ⬇️ CORREÇÃO FINAL: Mapeamento único e simplificado ⬇️
+      // Este mapeamento engloba todas as pastas na raiz (app, components, lib, hooks)
       "@/*": ["./*"] 
     }
   },
