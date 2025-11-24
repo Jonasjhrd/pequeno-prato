@@ -7,7 +7,6 @@ import RecipeFilter from '@/components/RecipeFilter';
 import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import '@/globals.css';
 
 export default function RecipesPage() {
   const [selectedAge, setSelectedAge] = useState('');

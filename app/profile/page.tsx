@@ -7,7 +7,6 @@ import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Trophy } from 'lucide-react';
-import '@/index.css';
 
 export default function ProfilePage() {
   const [userPoints] = useState(() => {

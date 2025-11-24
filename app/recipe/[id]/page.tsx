@@ -7,7 +7,6 @@ import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useState } from 'react';
-import '@/index.css';
 
 export default function RecipeDetailPage() {
   const params = useParams();
