@@ -20,8 +20,16 @@
     ],
     "baseUrl": ".", 
     "paths": {
-      // ⬇️ NOVA ORDEM: Prioriza app/, depois src/, depois a raiz
-      "@/*": ["./app/*", "./src/*", "./*"] 
+      // ⬇️ Mapeamento Correto Baseado na Estrutura de Pastas ⬇️
+      // Componentes e Lib (Na Raiz do Projeto)
+      "@/components/*": ["./components/*"],
+      "@/lib/*": ["./lib/*"],
+      
+      // Arquivos de App (Para globals.css, layout.tsx, etc.)
+      "@/app/*": ["./app/*"],
+
+      // O alias geral @/ aponta para a raiz
+      "@/*": ["./*"] 
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
