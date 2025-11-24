@@ -17,6 +17,12 @@ const nextConfig = {
       },
     ],
   },
+  // ⬇️ CORREÇÃO CRUCIAL AQUI: Adiciona a flag experimental ⬇️
+  experimental: {
+    // Isso desativa o Turbopack para que o Webpack possa resolver os aliases corretamente
+    forceSwcTransforms: true, 
+  },
+  // ⬆️ FIM DA CORREÇÃO ⬆️
 }
 
 export default nextConfig
