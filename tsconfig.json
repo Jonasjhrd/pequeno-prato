@@ -20,8 +20,8 @@
     ],
     "baseUrl": ".", 
     "paths": {
-      // ⬇️ CORREÇÃO FEITA AQUI: Adiciona a raiz do projeto (./*) como segunda opção
-      "@/*": ["./src/*", "./app/*", "./*"]
+      // ⬇️ NOVA ORDEM: Prioriza app/, depois src/, depois a raiz
+      "@/*": ["./app/*", "./src/*", "./*"] 
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
