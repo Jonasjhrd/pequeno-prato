@@ -18,27 +18,17 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
+    // ⬇️ REMOVEMOS O "baseUrl": "." ⬇️
     "paths": {
-      // ⬇️ MAPEAMENTO EXATO BASEADO NA SUA IMAGEM ⬇️
-      
-      // 1. Componentes (Resolve o erro do Footer)
+      // MAPEAMENTO ABSOLUTO: Força o Turbopack a reconhecer a pasta
+      // Mapeamos a raiz como a pasta atual e as subpastas necessárias
+      "@/*": ["./*"],
       "@/components/*": ["./components/*"],
-      
-      // 2. Outras pastas da raiz que vi na imagem
       "@/lib/*": ["./lib/*"],
       "@/hooks/*": ["./hooks/*"],
       "@/styles/*": ["./styles/*"],
-      
-      // 3. App (Onde você disse que estão as recipes)
       "@/app/*": ["./app/*"],
-
-      // 4. TRUQUE PARA O DATA:
-      // Se o código chama "@/data/recipes", vamos mandar ele procurar em "./app/recipes"
-      "@/data/*": ["./app/*"],
-
-      // 5. Fallback geral (Rede de segurança)
-      "@/*": ["./*"]
+      "@/data/*": ["./app/*"] // Mantemos o truque para a pasta data
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
