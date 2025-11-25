@@ -18,13 +18,27 @@
         "name": "next"
       }
     ],
-    // ⬇️ AQUI ESTÁ O SEGREDO: Base na raiz
-    "baseUrl": ".", 
+    "baseUrl": ".",
     "paths": {
-      // ⬇️ MAPEAMENTO UNIVERSAL:
-      // Isso diz: "Qualquer coisa que comece com @/, procure na raiz ./"
-      // Isso resolve @/components, @/data, @/lib, @/hooks automagicamente.
-      "@/*": ["./*"] 
+      // ⬇️ MAPEAMENTO EXATO BASEADO NA SUA IMAGEM ⬇️
+      
+      // 1. Componentes (Resolve o erro do Footer)
+      "@/components/*": ["./components/*"],
+      
+      // 2. Outras pastas da raiz que vi na imagem
+      "@/lib/*": ["./lib/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/styles/*": ["./styles/*"],
+      
+      // 3. App (Onde você disse que estão as recipes)
+      "@/app/*": ["./app/*"],
+
+      // 4. TRUQUE PARA O DATA:
+      // Se o código chama "@/data/recipes", vamos mandar ele procurar em "./app/recipes"
+      "@/data/*": ["./app/*"],
+
+      // 5. Fallback geral (Rede de segurança)
+      "@/*": ["./*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
