@@ -18,12 +18,14 @@
         "name": "next"
       }
     ],
-    // ⬇️ ESSENCIAL: Diz ao TypeScript que a raiz do projeto é o ponto de partida
+    // ESSENCIAL: Diz ao TypeScript que a raiz do projeto é o ponto de partida
     "baseUrl": ".", 
     "paths": {
-      // ⬇️ CORREÇÃO FINAL: Mapeamento único e simplificado ⬇️
-      // Este mapeamento engloba todas as pastas na raiz (app, components, lib, hooks)
-      "@/*": ["./*"] 
+      // ⬇️ CORREÇÃO FINAL E ISOLADA ⬇️
+      // Foca APENAS nas pastas que estavam causando o erro de Path Alias.
+      "@/components/*": ["./components/*"],
+      "@/lib/*": ["./lib/*"]
+      // O Next.js infere os caminhos de 'app' e 'hooks' automaticamente.
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
