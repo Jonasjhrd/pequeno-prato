@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Heart, Upload } from 'lucide-react';
 
 // ✅ CORREÇÃO 1: Aponta para a pasta 'lib' onde criamos o arquivo recipes.ts
-import { communityPosts as initialPosts } from '../../lib/recipes';
+import { communityPosts as initialPosts } from '@/lib/recipes';
 
 // ✅ CORREÇÃO 2: Usa caminhos relativos para garantir que o Vercel encontre os componentes
 import Header from '@/components/Header';

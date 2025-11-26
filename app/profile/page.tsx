@@ -5,7 +5,7 @@
 import { useState } from 'react';
 
 // ✅ CORREÇÃO 1: Aponta para o arquivo que você criou na lib (../../lib/recipes)
-import { recipes, badges } from '../../lib/recipes';
+import { recipes, badges } from '@/lib/recipes';
 
 // ✅ CORREÇÃO 2: Usa caminhos relativos (../../components/...)
 import GamificationBadge from '@/components/GamificationBadge';

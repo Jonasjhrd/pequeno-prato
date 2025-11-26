@@ -3,7 +3,7 @@
 import { useParams, useRouter } from 'next/navigation';
 
 // ✅ CORREÇÃO 1: Subimos 3 níveis (../../../) para chegar na pasta 'lib'
-import { recipes } from '../../lib/recipes';
+import { recipes } from '@/lib/recipes';
 
 import { ArrowLeft, Clock, Users, Heart } from 'lucide-react';
 

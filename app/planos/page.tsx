@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { Check } from "lucide-react"
 
 // ✅ CORREÇÃO 1: De '@/lib/supabase/server' para '../../lib/supabase/server'
-import { createClient } from "../../lib/supabase/server"
+import { createClient } from "@/lib/supabase/server"
 
 // ✅ CORREÇÃO 2: De '@/lib/products' para '../../lib/products'
 import { SUBSCRIPTION_PLANS } from "@/lib/products"
