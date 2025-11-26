@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation'
 import { createClient } from '../../lib/supabase/server'
 
 // ✅ CORREÇÃO 2: De '@/components/pequeno-prato-client' para '../../components/pequeno-prato-client'
-import PequenoPratoClient from '../../components/pequeno-prato-client'
+import PequenoPratoClient from '@/components/pequeno-prato-client'
 
 export default async function ReceitasPage() {
   const supabase = await createClient()

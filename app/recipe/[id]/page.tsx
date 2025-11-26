@@ -8,9 +8,9 @@ import { recipes } from '../../lib/recipes';
 import { ArrowLeft, Clock, Users, Heart } from 'lucide-react';
 
 // ✅ CORREÇÃO 2: Subimos 3 níveis para chegar na pasta 'components'
-import Header from '../../components/Header';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 import { useState } from 'react';
 

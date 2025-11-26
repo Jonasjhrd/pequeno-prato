@@ -8,10 +8,10 @@ import { useState } from 'react';
 import { recipes, badges } from '../../lib/recipes';
 
 // ✅ CORREÇÃO 2: Usa caminhos relativos (../../components/...)
-import GamificationBadge from '../../components/GamificationBadge';
-import Header from '../../components/Header';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
+import GamificationBadge from '@/components/GamificationBadge';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 import { Trophy } from 'lucide-react';
 
