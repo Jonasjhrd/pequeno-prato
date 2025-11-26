@@ -1,9 +1,15 @@
 import Link from "next/link"
 import { redirect } from "next/navigation"
 import { Check } from "lucide-react"
-import { createClient } from "@/lib/supabase/server"
-import { SUBSCRIPTION_PLANS } from "@/lib/products"
-import { CheckoutButton } from "@/components/checkout-button"
+
+// ✅ CORREÇÃO 1: De '@/lib/supabase/server' para '../../lib/supabase/server'
+import { createClient } from "../../lib/supabase/server"
+
+// ✅ CORREÇÃO 2: De '@/lib/products' para '../../lib/products'
+import { SUBSCRIPTION_PLANS } from "../../lib/products"
+
+// ✅ CORREÇÃO 3: De '@/components/checkout-button' para '../../components/checkout-button'
+import { CheckoutButton } from "../../components/checkout-button"
 
 export default async function PlanosPage() {
   try {

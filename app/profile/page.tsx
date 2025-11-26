@@ -1,12 +1,21 @@
+// app/profile/page.tsx
+
 'use client';
 
 import { useState } from 'react';
-import { recipes, badges } from '@/data/recipes';
-import GamificationBadge from '@/components/GamificationBadge';
-import Header from '@/components/Header';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+
+// ✅ CORREÇÃO 1: Aponta para o arquivo que você criou na lib (../../lib/recipes)
+import { recipes, badges } from '../../lib/recipes';
+
+// ✅ CORREÇÃO 2: Usa caminhos relativos (../../components/...)
+import GamificationBadge from '../../components/GamificationBadge';
+import Header from '../../components/Header';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
 import { Trophy } from 'lucide-react';
+
+// [O restante do código da página de perfil continua aqui]
 
 export default function ProfilePage() {
   const [userPoints] = useState(() => {

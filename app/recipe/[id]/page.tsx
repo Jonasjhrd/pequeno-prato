@@ -1,11 +1,17 @@
 'use client';
 
 import { useParams, useRouter } from 'next/navigation';
-import { recipes } from '@/data/recipes';
+
+// ✅ CORREÇÃO 1: Subimos 3 níveis (../../../) para chegar na pasta 'lib'
+import { recipes } from '../../../lib/recipes';
+
 import { ArrowLeft, Clock, Users, Heart } from 'lucide-react';
-import Header from '@/components/Header';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+
+// ✅ CORREÇÃO 2: Subimos 3 níveis para chegar na pasta 'components'
+import Header from '../../../components/Header';
+import Navigation from '../../../components/Navigation';
+import Footer from '../../../components/Footer';
+
 import { useState } from 'react';
 
 export default function RecipeDetailPage() {

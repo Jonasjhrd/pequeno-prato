@@ -1,12 +1,20 @@
+// app/recipes/page.tsx
+
 'use client';
 
 import { useState } from 'react';
-import { recipes } from '@/data/recipes';
-import RecipeCard from '@/components/RecipeCard';
-import RecipeFilter from '@/components/RecipeFilter';
-import Header from '@/components/Header';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+
+// ✅ CORREÇÃO 1: Aponta para o arquivo que você criou na lib (../../lib/recipes)
+import { recipes } from '../../lib/recipes';
+
+// ✅ CORREÇÃO 2: Usa caminhos relativos (../../components/...)
+import RecipeCard from '../../components/RecipeCard';
+import RecipeFilter from '../../components/RecipeFilter';
+import Header from '../../components/Header';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
+// [O restante do código da página de receitas continua aqui]
 
 export default function RecipesPage() {
   const [selectedAge, setSelectedAge] = useState('');
