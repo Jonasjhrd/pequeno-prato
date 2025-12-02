@@ -18,19 +18,14 @@
         "name": "next"
       }
     ],
-    // ⬇️ REMOVEMOS O "baseUrl": "." ⬇️
+    // ⬇️ ESSENCIAL: Diz ao TypeScript para procurar tudo dentro de 'src'
+    "baseUrl": "./src", 
     "paths": {
-      // MAPEAMENTO ABSOLUTO: Força o Turbopack a reconhecer a pasta
-      // Mapeamos a raiz como a pasta atual e as subpastas necessárias
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/app/*": ["./app/*"],
-      "@/data/*": ["./app/*"] // Mantemos o truque para a pasta data
+      // ⬇️ ESSENCIAL: Mantém o alias @/ apontando para o baseUrl (src)
+      "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  // ⬇️ Incluir todos os arquivos TS/TSX dentro de 'src'
+  "include": ["src/next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
