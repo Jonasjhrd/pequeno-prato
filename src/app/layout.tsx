@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
-// A importação do CSS usa o caminho relativo padrão
+// ✅ SUBSTITUÍDO: De Geist para Inter, compatível com Next 13
+import { Inter } from 'next/font/google' 
 import './globals.css'
 
-// ⚠️ Usando apenas Geist para a fonte padrão. Geist_Mono não precisa ser importada se não for usada.
-const geistSans = Geist({ 
+// ⚠️ Usando Inter, que é estável no Next.js v13
+const inter = Inter({ 
   subsets: ["latin"],
-  variable: '--font-geist-sans', // Define o nome da variável CSS
+  variable: '--font-inter', // Novo nome da variável
 });
-// const geistMono = Geist_Mono({ subsets: ["latin"] }); // Removida se não for usada
 
+// A seção metadata permanece a mesma
 export const metadata: Metadata = {
   title: 'Pequeno Prato - Receitas para Crianças',
   description: 'Aprenda receitas saudáveis e ganhe pontos jogando',
@@ -21,7 +21,6 @@ export const metadata: Metadata = {
         media: '(prefers-color-scheme: light)',
       },
       {
-      // 
         url: '/icon-dark-32x32.png',
         media: '(prefers-color-scheme: dark)',
       },
@@ -40,8 +39,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    // ⬇️ CORREÇÃO AQUI: Aplicação da classe da fonte ao body
-    <html lang="pt-BR" className={`${geistSans.variable}`}>
+    // ⬇️ CORREÇÃO AQUI: Aplicação da classe da nova fonte (inter)
+    <html lang="pt-BR" className={`${inter.variable}`}>
+      {/* O nome da classe do Tailwind deve ser 'font-inter' ou o nome da sua fonte, 
+          garantindo que o CSS da fonte padrão esteja correto. */}
       <body className={`font-sans antialiased`}>
         {children}
       </body>
