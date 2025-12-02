@@ -5,13 +5,13 @@
 import { useState } from 'react';
 
 // ✅ CORREÇÃO 1: Aponta para o arquivo que você criou na lib (../../lib/recipes)
-import { recipes, badges } from '/lib/recipes';
+import { recipes, badges } from '@/lib/recipes';
 
 // ✅ CORREÇÃO 2: Usa caminhos relativos (../../components/...)
-import GamificationBadge from '/components/GamificationBadge';
-import Header from '/components/Header';
-import Navigation from '/components/Navigation';
-import Footer from '/components/Footer';
+import GamificationBadge from '@/components/GamificationBadge';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 import { Trophy } from 'lucide-react';
 
